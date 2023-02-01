@@ -32,7 +32,7 @@ In conclusion, this dataset provides us with a wealth of information about the c
 
 - Abdur Rehman - I am a first year computer science major and I love coding!
 - Abdullah Munir - I am a first year computer science student and I am extremely interested in Data Science.   
-- Abhinav Malik -  I am Daryl Ritchots boyfriend and I love lizards along with the best subject English 150
+- Abhinav Malik -  
 
 ## Images
 
