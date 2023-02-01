@@ -16,7 +16,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 ## Team Members
 
-- Person 1: one sentence about you!
+- Abdur Rehman - I am a first year computer science major and I love coding!
 - Person 2: one sentence about you!
 - Person 3: one sentence about you!
 
