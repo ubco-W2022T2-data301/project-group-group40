@@ -31,7 +31,7 @@ In conclusion, this dataset provides us with a wealth of information about the c
 ## Team Members
 
 - Abdur Rehman - I am a first year computer science major and I love coding!
-- Abdullah Munir - I am a first year male stripper student and I am extremely interested in Data Science.   
+- Abdullah Munir - I am a first year male stripper student and I am extremely interested in working at gotham   
 - Abhinav Malik -  
 
 ## Images
