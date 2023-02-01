@@ -21,7 +21,7 @@ In conclusion, the problem of medical costs in the United States is a significan
 ## Team Members
 
 - Abdur Rehman - I am a first year computer science major and I love coding!
-- Person 2: one sentence about you!
+- Abdullah Munir - I am a first year computer science student and I am interested in Data Science.   
 - Person 3: one sentence about you!
 
 ## Images
