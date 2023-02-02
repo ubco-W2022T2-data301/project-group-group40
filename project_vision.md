@@ -4,4 +4,4 @@ Our goal is to provide a thorough and informative examination of medical spendin
 
 ## Contracted Grade
 
-For this project, we agree to contract for a { A+/A/B/C }.
+For this project, we agree to contract for a {A}.
