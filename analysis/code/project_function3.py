@@ -3,36 +3,41 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
+import pandas as pd
+
 def load_and_process(url_or_path_to_csv_file):
     
-    # Load data and drop unused columns
+    # Method chain 1: Load data and drop unused columns
     df = (
         pd.read_csv(url_or_path_to_csv_file)
-        .drop(['region'], axis=1)
+        .drop(['charges'], axis=1)
     )
     
-    # Clean data
+    # Method chain 2: Clean data
     df = (
         df
         .dropna()
         .reset_index(drop=True)
+        .assign(age=lambda x: round(x['age'])) # advanced operation 1: round age to nearest integer
     )
     
-    # Process data
+    # Method chain 3: Process data
     df = (
         df
-        .assign(is_smoker=df['smoker'].map({'yes': True, 'no': False}))
+        .assign(is_smoker=df['smoker'].map({'yes': True, 'no': False})) # advanced operation 2: map smoker column to boolean
         .drop(['smoker'], axis=1)
         .assign(age_group=pd.cut(df['age'], bins=[0, 18, 35, 50, 65, 100], labels=['0-18', '18-35', '35-50', '50-65', '65+']))
+        .assign(bmi_category=lambda x: pd.cut(x['bmi'], bins=[0, 18.5, 25, 30, 100], labels=['underweight', 'normal', 'overweight', 'obese'])) # advanced operation 3: categorize BMI
     )
     
-    # Restructure data format
+    # Method chain 4: Restructure data format
     df = (
         df
-        .melt(id_vars=['age', 'sex', 'bmi', 'is_smoker', 'age_group'], var_name='variable', value_name='value')
+        .melt(id_vars=['age', 'sex', 'bmi', 'is_smoker', 'age_group', 'bmi_category'], var_name='variable', value_name='value')
     )
     
     return df
+
 
 
 
@@ -85,4 +90,26 @@ def insurance_eda(dataframe):
     plt.ylabel("Mean Charges")
     plt.title("Trend of Charges over Age in the Medical Cost Dataset")
     plt.show()
+
+def add_age_and_bmi_categories(df):
+    age_bins = [0, 18, 30, 45, 60, 100]
+    age_labels = ['<18', '18-30', '30-45', '45-60', '60+']
+    df['age_group'] = pd.cut(df['age'], bins=age_bins, labels=age_labels)
+
+    bmi_bins = [0, 18.5, 25, 30, 100]
+    bmi_labels = ['underweight', 'normal', 'overweight', 'obese']
+    df['bmi_category'] = pd.cut(df['bmi'], bins=bmi_bins, labels=bmi_labels)
+    
+    return df
+
+
+def data_wrangling(dataframe):
+    region_coords = {"northeast": (42.246163,-73.856465), 
+                     "northwest": (47.037874,-121.695988), 
+                     "southeast": (31.243618,-84.256385), 
+                     "southwest": (34.739734,-106.693466)}
+    dataframe["latitude"] = dataframe["region"].apply(lambda x: region_coords[x][0])
+    dataframe["longitude"] = dataframe["region"].apply(lambda x: region_coords[x][1])
+    dataframe["smoking_status"] = dataframe["smoker"].apply(lambda x: True if x == "yes" else False)
+    dataframe.to_csv("processed_medicalCost_AbhinavMalik.csv", index=False)
 
