@@ -1,51 +1,35 @@
 import pandas as pd
 
-def load_and_process(file):
+def load_data(url):
+    
+    # loaded the data and dealt with the missing data in method chain 1.
+    
+    df = (
+        pd.read_csv(url)
+        .drop_duplicates()
+        .dropna()
+    )
 
-    def s(row):
-        if row['smoker'] == 'y':
-            if row['region'] == 'northwest':
-                if row['sex'] == 'male':
-                    return 'M-NW'
-                else:
-                    return 'F-NW'
-            elif row['region'] == 'northeast':
-                if row['sex'] == 'male':
-                    return 'M-NE'
-                else:
-                    return 'F-NE'
-            elif row['region'] == 'southwest':
-                if row['sex'] == 'male':
-                    return 'M-SW'
-                else:
-                    return 'F-SW'
-            elif row['region'] == 'southeast':
-                if row['sex'] == 'male':
-                    return 'M-SE'
-                else:
-                    return 'F-SE'
-        else:
-            return 0
+    # Created new column, dropped others, did processing and data warngling in the second method chain 
+    
+    region_sex_map = {
+        ('yes', 'northwest', 'male'): 'M-NW',
+        ('yes', 'northwest', 'female'): 'F-NW',
+        ('yes', 'northeast', 'male'): 'M-NE',
+        ('yes', 'northeast', 'female'): 'F-NE',
+        ('yes', 'southwest', 'male'): 'M-SW',
+        ('yes', 'southwest', 'female'): 'F-SW',
+        ('yes', 'southeast', 'male'): 'M-SE',
+        ('yes', 'southeast', 'female'): 'F-SE',
+    }
 
     df = (
-        pd.read_csv(file)
-          .drop(['children'], axis=1)
+        df
+        .rename(columns={'smoker': 'is_smoker'})
+        .replace({'is_smoker': {'yes': 'y', 'no': 'n'}})
+        .assign(region_sex=lambda x: x.apply(lambda row: region_sex_map.get((row['is_smoker'], row['region'], row['sex']), 0), axis=1))
+        .drop(columns=['is_smoker'])
     )
-    
-    df= (
-        df.drop_duplicates()
-          .dropna()
-    )
-    
-    df=(df.
-          assign(smoker=lambda x: x['smoker'].map({'yes': 'y', 'no': 'n'}))
-          .assign(region_sex=lambda x: x.apply(s, axis=1))
-         )
-    
-    
-   
 
+    # Returned the cleaned dataframe
     return df
-
-file = '../data/raw/Medical_Cost.csv'
-
