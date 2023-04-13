@@ -6,8 +6,8 @@ During our exploratory data analysis, we examined the distribution of medical ex
 
 One of the key findings from our EDA was that medical expenses were heavily skewed to the right, indicating that a small percentage of individuals had much higher medical costs than the rest of the population. We also observed that BMI was positively correlated with medical expenses, which was not surprising given that individuals with higher BMI tend to have more health issues.
 
-### Question 1: How are medical expenditures distributed across various regions and genders?
-To answer this question, we created a series of scatterplots to examine the relationship between medical expenses, region, and gender. We found that medical expenses were generally higher for males than females, and that the Southeast region had the highest medical expenses overall.
+### Question 1: Is there a link between smoking behaviours and medical costs, and does it differ by area and gender in the United States?
+To answer this question, we created a series of scatterplots to examine the relationship between medical expenses, region, and gender. We found that medical expenses were generally higher for males than females, and that the Southeast region had the highest medical expenses overall. You can check out the in depht analysis of this question in the [jupyter file]
 
 ### Question 2: Are children one of the underlying factors contributing to the high costs of healthcare in the United States?
 To explore this question, we grouped individuals by the number of children they had and examined the distribution of medical expenses within each group. We found that individuals with more children tended to have slightly higher medical expenses than those with fewer children. However, this difference was relatively small and likely not a significant factor in the overall high costs of healthcare in the United States.
