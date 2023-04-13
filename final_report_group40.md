@@ -54,5 +54,5 @@ The above line graph displays the trend of average medical charges with respect 
 
 
 ## **Summary/Conclusion**
-Overall, our analysis suggests that factors such as gender, region, smoking status, and BMI are all important contributors to the high costs of healthcare in the United States. While having more children may be a factor, It does vary depending on the number of children you have. Our findings underscore the importance of promoting healthy behaviors such as not smoking and maintaining a healthy BMI in order to reduce healthcare costs and improve overall health outcomes.
+Overall, our analysis suggests that factors such as gender, region, smoking status, and BMI are all important contributors to the high costs of healthcare in the United States. While having more children may be a factor, It does vary depending on the number of children you have. Our findings underscore the importance of promoting healthy behaviors such as not smoking and maintaining a healthy BMI in order to reduce healthcare costs and improve overall health outcomes.Overall, our analysis show that smoking habits lead to greater medical expenses, and that this association varies by gender and region in the United States. When we study and predict medical expenditures, these aspects must be taken into account.
 
