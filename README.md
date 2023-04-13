@@ -33,14 +33,40 @@ In brief, this dataset contains valuable information about the expense of health
 
 - Abdur Rehman - I am a first year computer science major and I love coding!
 - Abdullah Munir - I am a first year computer science student and I love data science.   
-- Abhinav Malik -  
+- Abhinav Malik -  I am a first year computer science student and I love Python. 
 
 ## Images
 
 {You should use this area to add a screenshot of an interesting plot, or of your dashboard}
 
+![Number of Smokers by Region and Gender](/images/project%201.png)
+
+
+
+
+![Total Medical Charges by Sex and Smoker Status](/images/project%202.png)
 <img src ="images/test.png" width="100px">
 
+
+
+
+![jointplot](/images/jointplot.png)
+
+
+
+
+![pivottable](/images/pivottable.png)
+
+
+
+
+![Relationship between BMI and Charges by Sex, Smoker, and Region](/images/relationship_bw_bmi_charges.png)
+
+
+
+
+
+![Trend of Charges over Age in the Medical Cost Dataset](/images/trend_of_charges_over_age.png)
 ## References
 
 {Add your stuff here}

@@ -18,13 +18,22 @@ I used a pivot table in the first code to determine total medical expenses by ge
 
 I used seaborn to construct a bar chart that shows the number of smokers by location and gender in the second code. The pink bars indicate the number of female smokers, whereas the blue bars indicate the number of male smokers. The graphic reveals that the southeast area has the most smokers, while male smokers outnumber female smokers in all regions.
 
-**My Conclusion**
-
-Overall, this data show that smoking habits leac to greater medical expenses, and that this association varies by gender and region in the United States.  Smoking has a major influence on medical expenditures, with smokers paying far more than non-smokers. The gender gap in medical expenses is less evident than the difference in smoking status. When we study and predict medical expenditures, these aspects must be taken into account. 
 
 
 ### Question 2: Are children one of the underlying factors contributing to the high costs of healthcare in the United States?
-To explore this question, we grouped individuals by the number of children they had and examined the distribution of medical expenses within each group. We found that individuals with more children tended to have slightly higher medical expenses than those with fewer children. However, this difference was relatively small and likely not a significant factor in the overall high costs of healthcare in the United States.
+To answer this topic, I used a range of powerful tools, including joint plots, cluster maps, and pivot tables. My primary focus was on evaluating the relationships between key variables such as children, age, gender, region, and charges.
+
+My findings demonstrated a striking link between the number of children in a household and medical expenses, with costs often rising as the family size expands. However, if a family has four or five children, this trend begins to level off, indicating a saturation threshold. Age and location were also identified as key factors influencing medical spending. Surprisingly, males with 3-4 children had higher medical costs than females, but families with more children had a higher median age. This question's in-depth examination may be found [notbook](/analysis/analysis1.ipynb). 
+
+
+![jointplot](/images/jointplot.png)
+
+According to the graph, the number of children has a positive relationship with healthcare costs, particularly for adults aged 20 to 40. The relationship between healthcare expenditures and the number of children may also decline as people age. Furthermore, we can see that healthcare costs climb as people age, especially for those with three or four children.
+
+![pivottable](/images/pivottable.png)
+
+The graph shows that the number of children has a positive relationship with the average cost of healthcare. Individuals with more children paid more for healthcare across all regions, albeit this decreases after 4-5 children. Similarly, the Southeast has the highest average charges, followed by the Northeast, Southwest, and Northwest.
+
 
 ### **Question 3: What is the relationship between body mass index (BMI) and smoking status and their impact on an individual's medical expenses in the United States?**
 To answer this question, I created a series of scatterplots and histograms to examine the relationship between BMI, smoking status, and medical expenses. You can check out my in depth analysis of this question in this [jupyter file](/analysis/analysis3.ipynb). I found that smokers tended to have much higher medical expenses than non-smokers, and that this effect was even more pronounced for individuals with higher BMI. These are few of the visualization I created which will give you an idea of how BMI and smoking status impact an individual's medical expenses in United States
@@ -43,13 +52,7 @@ This graph is a stacked histogram that compares the distribution of BMI for smok
 
 The above line graph displays the trend of average medical charges with respect to age. The x-axis represents age, while the y-axis shows the average medical charges. The graph indicates that medical charges increase with age, with a gradual incline until around age 60, after which the increase becomes steeper. This observation suggests that older individuals may have higher medical costs, possibly due to age-related health conditions.
 
-#### **My Conclusion**
-
-After carefully looking at the analysis of my research question, I have come to the conclusion that there is a significant relationship between BMI and smoking status and their impact on an individual's medical expenses in the United States. The first graph illustrates that as BMI increases, medical charges also tend to increase, with smokers exhibiting a stronger correlation. The second graph shows that smokers have a higher proportion of individuals in the overweight or obese BMI range, while non-smokers have a higher proportion of individuals within the healthy BMI range. Lastly, the third graph depicts that medical costs tend to increase with age, which is an important factor to consider when analyzing the relationship between BMI, smoking status, and medical expenses.
-Overall, these findings emphasize the importance of adopting healthy behaviors, such as maintaining a healthy BMI and quitting smoking, in reducing medical expenses. These insights can be used by healthcare providers, policymakers, and individuals to develop and implement effective strategies for managing healthcare costs and promoting healthy lifestyles.
-
-
 
 ## **Summary/Conclusion**
-Overall, our analysis suggests that factors such as gender, region, smoking status, and BMI are all important contributors to the high costs of healthcare in the United States. While having more children may be a factor, it is likely not a major contributor. Our findings underscore the importance of promoting healthy behaviors such as not smoking and maintaining a healthy BMI in order to reduce healthcare costs and improve overall health outcomes.
+Overall, our analysis suggests that factors such as gender, region, smoking status, and BMI are all important contributors to the high costs of healthcare in the United States. While having more children may be a factor, It does vary depending on the number of children you have. Our findings underscore the importance of promoting healthy behaviors such as not smoking and maintaining a healthy BMI in order to reduce healthcare costs and improve overall health outcomes.
 
